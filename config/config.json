@@ -1,0 +1,12 @@
+{
+    "template": {
+        "node": {
+            "github": "https://github.com/NuoHui/node_code_constructor.git",
+            "downloadUrl": "github:NuoHui/node_code_constructor"
+        },
+        "vue": {
+            "github": "https://github.com/NuoHui/vue_code_constructor.git",
+            "downloadUrl": "github:su37josephxia/vue-template"
+        }
+    }
+}
