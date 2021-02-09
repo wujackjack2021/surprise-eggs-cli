@@ -1,12 +1,16 @@
 {
-    "template": {
-        "node": {
-            "github": "https://github.com/NuoHui/node_code_constructor.git",
-            "downloadUrl": "github:NuoHui/node_code_constructor"
-        },
-        "vue": {
-            "github": "https://github.com/NuoHui/vue_code_constructor.git",
-            "downloadUrl": "github:su37josephxia/vue-template"
-        }
+  "template": {
+    "node": {
+      "github": "https://github.com/NuoHui/node_code_constructor.git",
+      "downloadUrl": "github:NuoHui/node_code_constructor"
+    },
+    "vue3.0-admin": {
+      "github": "https://github.com/wujackjack2021/vben-admin-thin-next.git",
+      "download": "github:wujackjack2021/vben-admin-thin-next"
+    },
+    "vue": {
+      "github": "https://github.com/NuoHui/vue_code_constructor.git",
+      "download": "github:NuoHui/vue_code_constructor"
     }
+  }
 }
