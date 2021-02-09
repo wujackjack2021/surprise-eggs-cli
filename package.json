@@ -1,10 +1,10 @@
 {
   "name": "surprise-eggs-cli",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "node scripts/release.js"
   },
   "bin": {
     "eggs": "./bin/surprise-eggs.js"
@@ -12,7 +12,18 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "keywords": [],
+  "directories": {
+    "lib": "cli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NuoHui/easy-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "tool",
+    "surprise-eggs-cli"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -20,21 +31,41 @@
     "clear": "^0.1.0",
     "commander": "^7.0.0",
     "download-git-repo": "^3.0.2",
+    "execa": "^5.0.0",
     "figlet": "^1.5.0",
+    "fs-extra": "^9.1.0",
     "handlebars": "^4.7.6",
     "inquirer": "^7.3.3",
     "is-git-url": "^1.0.0",
     "open": "^7.4.0",
     "ora": "^5.3.0",
+    "semver": "^7.3.4",
     "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
-    "prettier": "^2.2.1"
+    "husky": "^5.0.9",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1",
+    "standard-version": "^9.1.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
